@@ -1,0 +1,1 @@
+var medikApp = angular.module('medikApp', ['Controllers', 'ngRoute', 'routeApp', 'ngMaterial']);
