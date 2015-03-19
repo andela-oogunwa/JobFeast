@@ -1,12 +1,6 @@
 //require the nerd model
-var newUser = require('./controllers/user.controller')();
-var User = require('./models/user');
 
-module.exports = function(app){
 
-      router.post('/user/newUser', newUser);
-
-});
 
 // app.get('/api/users', function(req, res) {
 //     // use mongoose to get all nerds in the database
