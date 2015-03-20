@@ -35,11 +35,13 @@ app.use(express.static(__dirname + '/public'));
 
 // routes ==================================================
 var userRoute = require('./app/routes/user.route');
+var jobRoute = require('./app/routes/job.route');
 //require('./app/routes')(app); // configure our routes
 
 // start app ===============================================
 // startup our app at http://localhost:8080
 app.use('/api', userRoute);
+app.use('/api', jobRoute);
 app.listen(port);               
 
 // shoutout to the user                     

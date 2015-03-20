@@ -6,12 +6,12 @@ routeApp.config(['$routeProvider', function ($routeProvider) {
           templateUrl: 'public/views/home.html',
           controller: 'HomeController'
         }).
-        when('/admin', {
-          templateUrl: 'public/views/admin.html',
+        when('/logIn', {
+          templateUrl: 'public/views/logIn.html',
           controller: 'AdminController'
         }).
-        when('/info', {
-          templateUrl: 'public/views/info.html',
+        when('/admin', {
+          templateUrl: 'public/views/admin.html',
           controller: 'InfoController'
         }).
         otherwise({
