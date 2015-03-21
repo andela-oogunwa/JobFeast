@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en" ng-app='JobAppModule'>
-<head>
+  <head>
     <meta charset="UTF-8">
-
+    <base href='/'>
     <title>Starter MEAN Single Page Application</title>
-
-</head>
-<body ng-controller='jobAppControllerModule'>
-
+  </head>
+  <body>
     <ul>
-      <li data-ng-repeat='user in users'>{{user.username}}</li>
+      <li data-ng-repeat='user in users'></li>
     </ul>
-    <form>
-      
+    <!-- <form>
     <input type='text' ng-model='username'>
     <button ng-click='addUser()'>Submit</button>
-    </form>
+    </form> -->
     <div class="md-toolbar-item md-tools docs-tools" layout="column" layout-gt-md="row">
-        <a class="md-button md-default-theme" href="#/logIn">LogIn</a>
-        <a class="md-button md-default-theme" href="#/">Home</a>
-        <a class="md-button md-default-theme" href="#info">info</a>
-        <a class="md-button md-default-theme" href="#admin">Admin</a>
+        <a class="md-button md-default-theme" href="/login">LogIn</a>
+        <a class="md-button md-default-theme" href="home">Home</a>
+        <a class="md-button md-default-theme" href="admin">Admin</a>
       </div>
 
-</body>
+      <div ng-view></div>
 
-   <script src="lib/angular/angular.min.js"></script>
-   <script src="js/app.js"></script>
-   <script src="js/services/service.js"></script>
-   <script src="js/controllers/users.client.controller.js"></script>
+
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/angular-aria/angular-aria.min.js"></script>
+  <script src="lib/angular-animate/angular-animate.min.js"></script>
+  <script src="lib/hammerjs/hammer.min.js"></script>
+  <script src="lib/angular-material/angular-material.min.js"></script>
+  <script src="lib/angular-route/angular-route.min.js"></script>
+  <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="js/services/logInService.js"></script>
+  <script src="js/controllers/logIn.controller.js"></script>
+  <script src="js/appRoutes.js"></script>
+  <script src="js/app.js"></script> 
+</body>    
 </html>
+

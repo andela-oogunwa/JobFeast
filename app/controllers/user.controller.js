@@ -26,13 +26,15 @@ var Users = {
   },  
 
   findUsers: function(req, res, next) {
-
+        console.log('reaching here');
+    
     User.find(function(err, data){
       if(err) {
         res.send(err);
       }
       else {
         res.json(data);
+        console.log('reaching here');
       }
       next();
     });

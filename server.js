@@ -1,9 +1,11 @@
 // modules =================================================
 var express        = require('express');
 var app            = express();
+var path           = require('path');
 var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
 var mongoose = require('mongoose');
+var ejs            = require('ejs');
 
 // configuration ===========================================
     
@@ -31,12 +33,22 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride('X-HTTP-Method-Override')); 
 
 // set the static files location /public/img will be /img for users
-app.use(express.static(__dirname + '/public')); 
+app.use(express.static(__dirname + '/public'));
+app.set('views', __dirname + '/public');
+app.engine('html', require('ejs').renderFile);
+app.set('view engine', 'html');
 
 // routes ==================================================
 var userRoute = require('./app/routes/user.route');
 var jobRoute = require('./app/routes/job.route');
 //require('./app/routes')(app); // configure our routes
+app.get('/login', function(req, res) {
+  res.render('index', ({title: 'Medik'}));
+})
+var routes = ['/admin', '/home'];
+app.get(routes, function(req, res) {
+  res.render('index');
+});
 
 // start app ===============================================
 // startup our app at http://localhost:8080
