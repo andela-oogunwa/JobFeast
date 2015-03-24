@@ -1,7 +1,7 @@
-passport-mongo
+Job Board
 ==============
 
-This repository serves as an example of a basic Node.js application which is using [Passport](http://passportjs.org/) as the authentication middleware for authenticating against a locally configured Mongo backend
+This repository is a project for Andela, by Fadekemi Ogunwa
 
 Steps to run the app
 =====================
@@ -11,3 +11,5 @@ Steps to run the app
 Perquisites
 ============
 The server assumes that you have a local mongo instance running. This means if you have mongo installed locally, all you need to do is configure the db.js file correctly and run the mongod daemon
+=======
+#JobBoard
